@@ -80,3 +80,13 @@ nav {
   background-color: var(--primary-hover);
   transform: translateY(-1px);
 }
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--secondary);
+}
