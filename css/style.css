@@ -134,7 +134,7 @@ nav {
 
 .search-bar input {
   width: 100%;
-  padding: 12px 15px 12px 40px;
+  padding: 10px 15px 10px 30px;
   border: 1px solid #cbd5e1;
   border-radius: var(--radius);
   font-size: 1rem;
@@ -144,4 +144,10 @@ nav {
 
 .search-bar input:focus {
   border-color: var(--primary);
+}
+
+.search-bar i {
+  position: relative;
+  left: 15px;
+  color: var(--text-light);
 }
