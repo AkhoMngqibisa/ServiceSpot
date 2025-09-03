@@ -170,3 +170,9 @@ nav {
   font-size: 0.9rem;
   transition: var(--transition);
 }
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--primary);
+  color: var(--white);
+}
