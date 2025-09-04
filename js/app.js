@@ -16,7 +16,7 @@ function loadData() {
   if (storedData) {
     serviceList = JSON.parse(storedData);
   } else {
-    storedData = [
+    serviceList = [
       {
         id: 1,
         title: "Men's Haircut",
@@ -48,5 +48,10 @@ function loadData() {
         image: "/assets/Maths Tutor.jpg",
       },
     ];
+    saveDataToLocalStorage();
   }
+}
+
+function saveDataToLocalStorage() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(serviceList));
 }
