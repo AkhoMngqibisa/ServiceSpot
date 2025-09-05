@@ -3,13 +3,16 @@
  * Uses LocalStorage for data persistence.
  */
 
-const STORAGE_KEY = "servicespot_listings";
+const STORAGE_KEY = "servicespot_data";
 
 let serviceList = [];
 let currentFilter = "All";
+let servicesGrid;
 
-// DOM Elements
-const servicesGrid = document.getElementById("servicesGrid");
+document.addEventListener("DOMContentLoaded", function () {
+  servicesGrid = document.getElementById("servicesGrid");
+  initializeData();
+});
 
 function initializeData() {
   loadData();
