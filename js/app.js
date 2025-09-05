@@ -11,6 +11,11 @@ let currentFilter = "All";
 // DOM Elements
 const servicesGrid = document.getElementById("servicesGrid");
 
+function initializeData() {
+  loadData();
+  renderData();
+}
+
 function loadData() {
   const storedData = localStorage.getItem(STORAGE_KEY);
   if (storedData) {
