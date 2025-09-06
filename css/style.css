@@ -184,3 +184,9 @@ nav {
   color: var(--text-light);
   grid-column: 1/-1;
 }
+
+.empty-state i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #cbd5e1;
+}
