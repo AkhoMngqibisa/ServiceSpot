@@ -78,4 +78,8 @@ function renderData() {
         `;
     return;
   }
+
+  serviceList.forEach((item) => {
+    const card = document.createElement('article');
+  })
 }
