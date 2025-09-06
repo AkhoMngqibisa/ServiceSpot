@@ -86,6 +86,8 @@ function renderData() {
               <div class="card-img">
                 <img src="${item.image}" alt="${item.image}" loading="lazy">
                 <span class="category">${item.category}</span>
+              </div>
+              <div class="card-body">
               
               </div>
     `
