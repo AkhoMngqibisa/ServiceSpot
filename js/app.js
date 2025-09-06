@@ -85,7 +85,7 @@ function renderData() {
     card.innerHTML = `
               <div class="card-img">
                 <img src="${item.image}" alt="${item.image}" loading="lazy">
-              
+                <span class="category">${item.category}</span>
               
               </div>
     `
