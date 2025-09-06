@@ -81,5 +81,14 @@ function renderData() {
 
   serviceList.forEach((item) => {
     const card = document.createElement('article');
-  })
+    card.className = "card";
+    card.innerHTML = `
+              <div class="card-img">
+                <img src="${item.image}" alt="${item.image}" loading="lazy">
+              
+              
+              </div>
+    `
+    servicesGrid.appendChild(card);
+  });
 }
