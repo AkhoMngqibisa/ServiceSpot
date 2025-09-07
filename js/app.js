@@ -88,7 +88,7 @@ function renderData() {
                 <span class="category">${item.category}</span>
               </div>
               <div class="card-body">
-              
+                <h3 class="card-title">${item.title}</h3>
               </div>
     `
     servicesGrid.appendChild(card);
