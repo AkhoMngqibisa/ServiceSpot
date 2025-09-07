@@ -93,6 +93,8 @@ function renderData() {
                   <i class="fas fa-user-circle"></i> ${item.provider}
                 </div>
                 <p class="card-desc"> ${item.description}</p>
+                <div class="card-footer">
+                </div>
               </div>
     `
     servicesGrid.appendChild(card);
