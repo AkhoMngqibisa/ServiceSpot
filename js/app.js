@@ -89,6 +89,10 @@ function renderData() {
               </div>
               <div class="card-body">
                 <h3 class="card-title">${item.title}</h3>
+                <div class="card-provider">
+                  <i class="fas fa-user-circle"></i> ${item.provider}
+                </div>
+          
               </div>
     `
     servicesGrid.appendChild(card);
