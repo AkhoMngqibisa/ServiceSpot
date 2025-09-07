@@ -94,6 +94,7 @@ function renderData() {
                 </div>
                 <p class="card-desc"> ${item.description}</p>
                 <div class="card-footer">
+                <span class="price">${item.price}</span>
                 </div>
               </div>
     `
