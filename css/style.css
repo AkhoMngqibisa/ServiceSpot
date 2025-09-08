@@ -198,3 +198,14 @@ nav {
   gap: 25px;
   padding-bottom: 60px;
 }
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var()var(--white);
+  border-radius: var(--white);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
