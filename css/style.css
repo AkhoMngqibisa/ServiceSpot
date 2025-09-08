@@ -209,3 +209,9 @@ nav {
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
 }
+
+.card-img {
+  position: relative;
+  height: 180px;
+  background-color: #e2e8f0;
+}
