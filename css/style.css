@@ -190,3 +190,11 @@ nav {
   margin-bottom: 15px;
   color: #cbd5e1;
 }
+
+/* --- Cards ---*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding-bottom: 60px;
+}
