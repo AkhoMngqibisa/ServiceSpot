@@ -95,6 +95,9 @@ function renderData() {
                 <p class="card-desc"> ${item.description}</p>
                 <div class="card-footer">
                 <span class="price">${item.price}</span>
+                <button class="btn btn-outline" style="padding: 5px 12px; font-size: 0.85rem;">
+                  Contact
+                </button>
                 </div>
               </div>
     `
