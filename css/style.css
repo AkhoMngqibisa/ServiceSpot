@@ -11,6 +11,7 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --radius: 12px;
   --transition: all 0.3s ease;
+  --line-height: 1.5;
 }
 
 * {
@@ -23,7 +24,7 @@
 body {
   background-color: var(--bg-body);
   color: var(--text-dark);
-  line-height: 1.5;
+  line-height: var(--line-height);
 }
 
 /* --- Layout and Typography ---*/
@@ -61,7 +62,7 @@ nav {
 .btn {
   display: inline-flex;
   align-items: center;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   font-weight: 500;
   padding: 10px 20px;
   gap: 8px;
@@ -261,4 +262,12 @@ nav {
   margin-bottom: 10px;
   align-items: center;
   gap: 5px;
+}
+
+.card-desc {
+  font-size: 0.8rem;
+  color: #475569;
+  margin-bottom: 15px;
+  line-height: var(--line-height);
+  flex-grow: 1;
 }
