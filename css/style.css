@@ -253,3 +253,12 @@ nav {
   margin-bottom: 5px;
   color: var(--text-dark);
 }
+
+.card-provider {
+  display: flex;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 10px;
+  align-items: center;
+  gap: 5px;
+}
