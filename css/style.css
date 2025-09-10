@@ -271,3 +271,12 @@ nav {
   line-height: var(--line-height);
   flex-grow: 1;
 }
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  border-top: 1px solid #cbd5e1;
+  padding-top: 15px;
+}
