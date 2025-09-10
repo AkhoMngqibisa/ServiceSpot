@@ -280,3 +280,9 @@ nav {
   border-top: 1px solid #cbd5e1;
   padding-top: 15px;
 }
+
+.price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+}
