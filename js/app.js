@@ -53,7 +53,7 @@ function loadData() {
         price: "R150/hr",
         description:
           "Certified teacher helping with Algebra, Calculus, and SAT prep. Group discounts available.",
-        image: "/assets/Maths Tutor.jpg",
+        image: "/assets/Maths Tutor.png",
       },
     ];
     saveDataToLocalStorage();
