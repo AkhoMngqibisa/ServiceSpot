@@ -8,9 +8,11 @@ const STORAGE_KEY = "servicespot_data";
 let serviceList = [];
 let currentFilter = "All";
 let servicesGrid;
+let searchInput;
 
 document.addEventListener("DOMContentLoaded", function () {
   servicesGrid = document.getElementById("servicesGrid");
+  searchInput = document.getElementById("searchInput");
   initializeData();
 });
 
@@ -67,8 +69,19 @@ function saveDataToLocalStorage() {
 function renderData() {
   servicesGrid.innerHTML = "";
 
+  const searchItem = searchInput.value.toLowerCase();
+
+  const filteredListings = serviceList.filter((item) => {
+    const matchesCategory = currentFilter === "All" || item.category === currentFilter; 
+    const matchesSearch = item.title.toLowerCase().includes(searchItem) || 
+    item.description.toLowerCase().includes(searchItem) 
+    item.provider.toLowerCase().includes(searchItem);
+
+    return matchesCategory && matchesSearch;
+  });
+
   // Check if there is already services added
-  if (serviceList.length === 0) {
+  if (filteredListings.length === 0) {
     servicesGrid.innerHTML = `
             <div class="empty-state">
                 <i class="fas fa-search"></i>
@@ -79,7 +92,7 @@ function renderData() {
     return;
   }
 
-  serviceList.forEach((item) => {
+  filteredListings.forEach((item) => {
     const card = document.createElement('article');
     card.className = "card";
     card.innerHTML = `
