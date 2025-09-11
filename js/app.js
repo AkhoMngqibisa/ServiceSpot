@@ -43,7 +43,7 @@ function loadData() {
         price: "R80+",
         description:
           "Special occasion hair styling and makeup trials available at home or studio.",
-        image: "/assets/Bridal Styling.jpeg",
+        image: "/assets/Bridal Styling.png",
       },
       {
         id: 3,
