@@ -5,12 +5,14 @@
 
 const STORAGE_KEY = "servicespot_data";
 
-let serviceList = [];
 let currentFilter = "All";
+let filterBtns;
 let servicesGrid;
 let searchInput;
+let serviceList = [];
 
 document.addEventListener("DOMContentLoaded", function () {
+  filterBtns = document.querySelectorAll("filter-btn");
   servicesGrid = document.getElementById("servicesGrid");
   searchInput = document.getElementById("searchInput");
   initializeData();
@@ -19,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function initializeData() {
   loadData();
   renderData();
+  search();
 }
 
 function loadData() {
@@ -115,5 +118,20 @@ function renderData() {
               </div>
     `
     servicesGrid.appendChild(card);
+  });
+}
+
+function search() {
+  searchInput.addEventListener("input", renderData);
+  // Categories
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // Update UI
+      filterBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      // Update State
+      currentFilter = btn.dataset.category;
+      renderData();
+    });
   });
 }
