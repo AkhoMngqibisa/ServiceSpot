@@ -33,7 +33,7 @@ function loadData() {
         price: "R100+",
         description:
           "Professional cuts, hot towel shaves, and a friendly atmosphere. Walk-ins welcome.",
-        image: "/assets/Men's Haircut.jpg",
+        image: "/assets/Men's Haircut.png",
       },
       {
         id: 2,
