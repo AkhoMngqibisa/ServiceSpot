@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function initializeData() {
   loadData();
   renderData();
-  search();
+  filterData();
 }
 
 function loadData() {
@@ -122,7 +122,7 @@ function renderData() {
   });
 }
 
-function search() {
+function filterData() {
   searchInput.addEventListener("input", renderData);
   // Categories
   filterBtns.forEach((btn) => {
