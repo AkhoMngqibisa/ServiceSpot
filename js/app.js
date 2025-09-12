@@ -107,6 +107,8 @@ function displayData(filteredListings, servicesGrid) {
               <div class="card-img">
                 <img src="${item.image}" alt="${item.image}" loading="lazy">
                 <span class="category">${item.category}</span>
+                <button class="delete-btn" onclick="deleteService(${item.id})" 
+                  title="Delete Service"><i class="fas fa-trash"> </i></button>
               </div>
               <div class="card-body">
                 <h3 class="card-title">${item.title}</h3>
