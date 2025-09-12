@@ -77,8 +77,9 @@ function renderData() {
   const filteredListings = serviceList.filter((item) => {
     const matchesCategory = currentFilter === "All" || item.category === currentFilter; 
     const matchesSearch = item.title.toLowerCase().includes(searchItem) || 
-    item.description.toLowerCase().includes(searchItem) 
-    item.provider.toLowerCase().includes(searchItem);
+    item.description.toLowerCase().includes(searchItem) ||
+    item.provider.toLowerCase().includes(searchItem) ||
+    item.category.toLowerCase().includes(searchItem);
 
     return matchesCategory && matchesSearch;
   });
