@@ -12,7 +12,7 @@ let searchInput;
 let serviceList = [];
 
 document.addEventListener("DOMContentLoaded", function () {
-  filterBtns = document.querySelectorAll("filter-btn");
+  filterBtns = document.querySelectorAll(".filter-btn");
   servicesGrid = document.getElementById("servicesGrid");
   searchInput = document.getElementById("searchInput");
   initializeData();
