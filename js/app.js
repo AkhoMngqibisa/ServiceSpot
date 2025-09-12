@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function initializeData() {
   loadData();
   renderData();
-  filterData();
+  search();
 }
 
 function loadData() {
@@ -75,15 +75,19 @@ function renderData() {
   const searchItem = searchInput.value.toLowerCase();
 
   const filteredListings = serviceList.filter((item) => {
-    const matchesCategory = currentFilter === "All" || item.category === currentFilter; 
-    const matchesSearch = item.title.toLowerCase().includes(searchItem) || 
-    item.description.toLowerCase().includes(searchItem) ||
-    item.provider.toLowerCase().includes(searchItem) ||
-    item.category.toLowerCase().includes(searchItem);
+    const matchesCategory = currentFilter === "All" || item.category === currentFilter;
+    const matchesSearch = item.title.toLowerCase().includes(searchItem) ||
+      item.description.toLowerCase().includes(searchItem) ||
+      item.provider.toLowerCase().includes(searchItem) ||
+      item.category.toLowerCase().includes(searchItem);
 
     return matchesCategory && matchesSearch;
   });
 
+  displayData(filteredListings, servicesGrid);
+}
+
+function displayData(filteredListings, servicesGrid) {
   // Check if there is already services added
   if (filteredListings.length === 0) {
     servicesGrid.innerHTML = `
@@ -122,7 +126,7 @@ function renderData() {
   });
 }
 
-function filterData() {
+function search() {
   searchInput.addEventListener("input", renderData);
   // Categories
   filterBtns.forEach((btn) => {
