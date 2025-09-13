@@ -148,6 +148,7 @@ function deleteService(id) {
     serviceList = serviceList.filter((item) => item.id !== id);
     saveDataToLocalStorage();
     renderData();
+    showToast("Service removed", "success");
   }
 }
 
