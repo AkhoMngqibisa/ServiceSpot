@@ -281,8 +281,30 @@ nav {
   padding-top: 15px;
 }
 
-.price {
+.card .price {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--primary);
+}
+
+.card .delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fee2e2;
+  color: #ef4444;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.card:hover .delete-btn {
+  opacity: 1;
 }
