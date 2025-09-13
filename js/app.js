@@ -160,4 +160,12 @@ function showToast(message, type = "success") {
       <span> ${message} </span>
   `;
   container.appendChild(toast);
+
+  // Remove after 3 seconds
+  setTimeout(() => {
+    toast.style.animation = "fadeOut 0.3s ease-out forwards";
+    toast.addEventListener("animationend", () => {
+      toast.remove();
+    });
+  }, 3000);
 }
