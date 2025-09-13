@@ -150,3 +150,14 @@ function deleteService(id) {
     renderData();
   }
 }
+
+function showToast(message, type = "success") {
+  const container = document.getElementById("toastContainer");
+  const toast = document.createElement("div");
+  toast.className = `toast ${type}`;
+  toast.innerHTML = `
+      <i class="fas ${type === "success" ? "fa-check-circle" : "fa-exclamation-circle"}"></i>
+      <span> ${message} </span>
+  `;
+  container.appendChild(toast);
+}
