@@ -142,3 +142,11 @@ function search() {
     });
   });
 }
+
+function deleteService(id) {
+  if(confirm("Are you sure you want to remove this service?")) {
+    serviceList = serviceList.filter((item) => item.id !== id);
+    saveDataToLocalStorage();
+    renderData();
+  }
+}
