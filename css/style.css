@@ -319,3 +319,16 @@ nav {
   gap: 10px;
   z-index: 2000;
 }
+
+.toast {
+  display: flex;
+  align-items: center;
+  background-color: var(--text-dark);
+  color: var(--white);
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  animation: slideIn 0.3s ease-out forwards;
+  gap: 10px;
+  min-width: 250px;
+}
