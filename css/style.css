@@ -333,6 +333,12 @@ nav {
   min-width: 250px;
 }
 
+.toast.success {
+  border-left: 15px solid var(--primary);
+}
+
+/* --- Keyframes ---*/
+
 @keyframes slideIn {
   from {
     transform: translateX(100%);
