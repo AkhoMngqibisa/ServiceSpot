@@ -1,6 +1,7 @@
 /**
  * ServiceSpot Application Logic
  * Uses LocalStorage for data persistence.
+ * Main logic (State, Render, LocalStorage)
  */
 
 const STORAGE_KEY = "servicespot_data";
@@ -150,23 +151,4 @@ function deleteService(id) {
     renderData();
     showToast("Service removed", "success");
   }
-}
-
-function showToast(message, type = "success") {
-  const container = document.getElementById("toastContainer");
-  const toast = document.createElement("div");
-  toast.className = `toast ${type}`;
-  toast.innerHTML = `
-      <i class="fas ${type === "success" ? "fa-check-circle" : "fa-exclamation-circle"}"></i>
-      <span> ${message} </span>
-  `;
-  container.appendChild(toast);
-
-  // Remove after 3 seconds
-  setTimeout(() => {
-    toast.style.animation = "fadeOut 0.3s ease-out forwards";
-    toast.addEventListener("animationend", () => {
-      toast.remove();
-    });
-  }, 3000);
 }
