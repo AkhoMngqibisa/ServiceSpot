@@ -337,6 +337,10 @@ nav {
   border-left: 15px solid var(--primary);
 }
 
+.toast.error {
+  border-left: 15px solid #ef4444;
+}
+
 /* --- Keyframes ---*/
 
 @keyframes slideIn {
