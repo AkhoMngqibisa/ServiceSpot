@@ -72,9 +72,13 @@ function saveDataToLocalStorage() {
 
 function renderData() {
   servicesGrid.innerHTML = "";
+  const filteredListings = filterData(serviceList);
 
+  displayData(filteredListings, servicesGrid);
+}
+
+function filterData(serviceList) {
   const searchItem = searchInput.value.toLowerCase();
-
   const filteredListings = serviceList.filter((item) => {
     const matchesCategory = currentFilter === "All" || item.category === currentFilter;
     const matchesSearch = item.title.toLowerCase().includes(searchItem) ||
@@ -85,7 +89,7 @@ function renderData() {
     return matchesCategory && matchesSearch;
   });
 
-  displayData(filteredListings, servicesGrid);
+  return filteredListings;
 }
 
 function displayData(filteredListings, servicesGrid) {
