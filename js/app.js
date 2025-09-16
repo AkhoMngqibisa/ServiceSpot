@@ -36,6 +36,7 @@ function loadData() {
         title: "Men's Haircut",
         category: "Barber",
         provider: "Micheal Dok",
+        cell: null,
         price: "R100+",
         description:
           "Professional cuts, hot towel shaves, and a friendly atmosphere. Walk-ins welcome.",
@@ -46,6 +47,7 @@ function loadData() {
         title: "Bridal Styling",
         category: "Salon",
         provider: "Bella Beauty",
+        cell: "0621982193",
         price: "R80+",
         description:
           "Special occasion hair styling and makeup trials available at home or studio.",
@@ -56,6 +58,7 @@ function loadData() {
         title: "Math Tutoring (High School)",
         category: "Tutor",
         provider: "Akhona Mngqibisa",
+        cell: "0621982193",
         price: "R150/hr",
         description:
           "Certified teacher helping with Algebra, Calculus, and SAT prep. Group discounts available.",
@@ -93,7 +96,7 @@ function filterData(serviceList) {
 }
 
 function deleteService(id) {
-  if(confirm("Are you sure you want to remove this service?")) {
+  if (confirm("Are you sure you want to remove this service?")) {
     serviceList = serviceList.filter((item) => item.id !== id);
     saveDataToLocalStorage();
     renderData();
