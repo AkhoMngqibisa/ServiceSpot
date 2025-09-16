@@ -35,7 +35,7 @@ function displayData(filteredListings, servicesGrid) {
                 <p class="card-desc"> ${escapeHtml(item.description)}</p>
                 <div class="card-footer">
                 <span class="price">${escapeHtml(item.price)}</span>
-                <button class="btn btn-outline" style="padding: 5px 12px; font-size: 0.85rem;">
+                <button class="btn btn-outline" style="padding: 5px 12px; font-size: 0.85rem;" onclick="contactProvider('${item.provider}','${item.cell}')">
                   Contact
                 </button>
                 </div>
@@ -87,4 +87,10 @@ function escapeHtml(text) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
+}
+
+function contactProvider(providerName, providerCell) {
+  if (providerCell === '' || providerCell == null || providerCell.toLowerCase() == 'null') {
+    showToast("Provider has not set up contact information", "error");
+  }
 }
