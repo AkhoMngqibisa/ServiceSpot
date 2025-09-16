@@ -94,3 +94,10 @@ function contactProvider(providerName, providerCell) {
     showToast("Provider has not set up contact information", "error");
   }
 }
+
+function sendWhatsAppMessage(cell, message) {
+    // Remove spaces of dashes from the phone number
+    const cell = cell.replace(/[^0-9]/g,'');
+    const message = message;
+    window.open(`https://wa.me/${cell}?text=${encodeURIComponent(message)}`,'_blank');
+}
