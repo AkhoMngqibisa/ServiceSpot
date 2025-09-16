@@ -28,13 +28,13 @@ function displayData(filteredListings, servicesGrid) {
                   title="Delete Service"><i class="fas fa-trash"> </i></button>
               </div>
               <div class="card-body">
-                <h3 class="card-title">${item.title}</h3>
+                <h3 class="card-title">${escapeHtml(item.title)}</h3>
                 <div class="card-provider">
-                  <i class="fas fa-user-circle"></i> ${item.provider}
+                  <i class="fas fa-user-circle"></i> ${escapeHtml(item.provider)}
                 </div>
-                <p class="card-desc"> ${item.description}</p>
+                <p class="card-desc"> ${escapeHtml(item.description)}</p>
                 <div class="card-footer">
-                <span class="price">${item.price}</span>
+                <span class="price">${escapeHtml(item.price)}</span>
                 <button class="btn btn-outline" style="padding: 5px 12px; font-size: 0.85rem;">
                   Contact
                 </button>
