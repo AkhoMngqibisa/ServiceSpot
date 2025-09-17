@@ -47,7 +47,7 @@ function loadData() {
         title: "Bridal Styling",
         category: "Salon",
         provider: "Bella Beauty",
-        cell: "0621982193",
+        cell: "+27621982193",
         price: "R80+",
         description:
           "Special occasion hair styling and makeup trials available at home or studio.",
@@ -58,7 +58,7 @@ function loadData() {
         title: "Math Tutoring (High School)",
         category: "Tutor",
         provider: "Akhona Mngqibisa",
-        cell: "0621982193",
+        cell: "+27621982193",
         price: "R150/hr",
         description:
           "Certified teacher helping with Algebra, Calculus, and SAT prep. Group discounts available.",
