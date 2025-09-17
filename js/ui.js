@@ -96,10 +96,10 @@ function contactProvider(providerName, providerCell) {
     providerCell.toLowerCase() == "null"
   ) {
     showToast("Provider has not set up contact information", "error");
+  } else {
+    const message = `Hi ${providerName}, I found your listing on ServiceSpot and am interested in your services.`;
+    sendWhatsAppMessage(providerCell, message);
   }
-
-  const message = `Hi ${providerName}, I found your listing on ServiceSpot and am interested in your services.`;
-  sendWhatsAppMessage(providerCell, message);
 }
 
 function sendWhatsAppMessage(recipientCell, recipientMessage) {
