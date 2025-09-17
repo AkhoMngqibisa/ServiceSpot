@@ -90,13 +90,23 @@ function escapeHtml(text) {
 }
 
 function contactProvider(providerName, providerCell) {
-  if (providerCell === '' || providerCell == null || providerCell.toLowerCase() == 'null') {
+  if (
+    providerCell === "" ||
+    providerCell == null ||
+    providerCell.toLowerCase() == "null"
+  ) {
     showToast("Provider has not set up contact information", "error");
   }
+
+  const message = `Hi ${providerName}, I found your listing on ServiceSpot and am interested in your services.`;
+  sendWhatsAppMessage(providerCell, message);
 }
 
 function sendWhatsAppMessage(recipientCell, recipientMessage) {
-    // Remove spaces of dashes from the phone number
-    const cell = recipientCell.replace(/[^0-9]/g,'');
-    window.open(`https://wa.me/${cell}?text=${encodeURIComponent(recipientMessage)}`,'_blank');
+  // Remove spaces of dashes from the phone number
+  const cell = recipientCell.replace(/[^0-9]/g, "");
+  window.open(
+    `https://wa.me/${cell}?text=${encodeURIComponent(recipientMessage)}`,
+    "_blank",
+  );
 }
