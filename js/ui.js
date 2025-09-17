@@ -95,9 +95,8 @@ function contactProvider(providerName, providerCell) {
   }
 }
 
-function sendWhatsAppMessage(cell, message) {
+function sendWhatsAppMessage(recipientCell, recipientMessage) {
     // Remove spaces of dashes from the phone number
-    const cell = cell.replace(/[^0-9]/g,'');
-    const message = message;
-    window.open(`https://wa.me/${cell}?text=${encodeURIComponent(message)}`,'_blank');
+    const cell = recipientCell.replace(/[^0-9]/g,'');
+    window.open(`https://wa.me/${cell}?text=${encodeURIComponent(recipientMessage)}`,'_blank');
 }
