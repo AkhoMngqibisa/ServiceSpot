@@ -6,16 +6,16 @@
 
 const STORAGE_KEY = "servicespot_data";
 
-let addService;
 let currentFilter = "All";
 let filterBtns;
+let modalOverlay;
 let servicesGrid;
 let searchInput;
 let serviceList = [];
 
 document.addEventListener("DOMContentLoaded", function () {
-  addService = document.getElementById("addService");
-  filterBtns = document.querySelectorAll(".filter-btn");
+  filterBtns = document.querySelectorAll(".filter-btn");  
+  modalOverlay = document.getElementById("modalOverlay");
   servicesGrid = document.getElementById("servicesGrid");
   searchInput = document.getElementById("searchInput");
   initializeData();

@@ -110,3 +110,7 @@ function sendWhatsAppMessage(recipientCell, recipientMessage) {
     "_blank",
   );
 }
+
+function openAddServiceModal() {
+  modalOverlay.classList.add("open");
+}
