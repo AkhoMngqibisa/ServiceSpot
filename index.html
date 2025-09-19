@@ -72,7 +72,29 @@
               <button class="close-modal" id="closeModalBtn">&times;</button>
             </div>
             <form id="addServiceForm">
-              
+              <div class="form-group">
+                <label for="title">Service Title</label>
+                <input type="text" id="title" placeholder="e.g Professional Haircut" required/>
+              </div>
+              <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" required>
+                  <option value="Barber">Barber</option>
+                  <option value="Salom">Salon</option>
+                  <option value="Home">Home Repairs</option>
+                  <option value="Tutor">Tutoring</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="provider">Provider Name</label>
+                <input type="text" id="provider" placeholder="e.g John Hill" required/>
+              </div>
+              <div class="form-group">
+                <label for="price">Price (R)</label>
+                <input type="text" id="price" placeholder="e.g R20 or Negotiable" required/>
+              </div>
+
             </form>
           </div>
         </div>
