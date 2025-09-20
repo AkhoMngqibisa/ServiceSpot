@@ -387,6 +387,14 @@ nav {
   margin-bottom: 20px;
 }
 
+.close-modal {
+  color: var(--text-light);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 /* --- Keyframes ---*/
 @keyframes slideIn {
   from {
