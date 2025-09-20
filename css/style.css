@@ -364,6 +364,18 @@ nav {
   pointer-events: all;
 }
 
+.modal {
+  width: 90%;
+  max-width: 580px;
+  max-height: 90vh;
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: var(--radius);
+  transform: translateY(20px);
+  transition: transform 0.3s;
+  overflow-y: auto;
+}
+
 /* --- Keyframes ---*/
 @keyframes slideIn {
   from {
