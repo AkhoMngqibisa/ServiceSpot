@@ -376,6 +376,10 @@ nav {
   overflow-y: auto;
 }
 
+.modal-overlay.open .modal {
+  transform: translateY(0);
+}
+
 /* --- Keyframes ---*/
 @keyframes slideIn {
   from {
