@@ -395,6 +395,10 @@ nav {
   cursor: pointer;
 }
 
+.form-group {
+  margin-bottom: 15px;
+}
+
 /* --- Keyframes ---*/
 @keyframes slideIn {
   from {
