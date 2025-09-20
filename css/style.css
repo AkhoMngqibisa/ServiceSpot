@@ -380,6 +380,13 @@ nav {
   transform: translateY(0);
 }
 
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 /* --- Keyframes ---*/
 @keyframes slideIn {
   from {
