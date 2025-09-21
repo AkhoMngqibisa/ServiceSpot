@@ -406,6 +406,17 @@ nav {
   font-size: 0.9rem;
 }
 
+.form-group input,
+.form-group select,
+.form-group textarea {
+  font-size: 0.8rem;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+
 /* --- Keyframes ---*/
 @keyframes slideIn {
   from {
