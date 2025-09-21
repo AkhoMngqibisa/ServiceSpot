@@ -399,6 +399,13 @@ nav {
   margin-bottom: 15px;
 }
 
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
 /* --- Keyframes ---*/
 @keyframes slideIn {
   from {
