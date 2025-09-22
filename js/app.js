@@ -105,3 +105,8 @@ function deleteService(id) {
     showToast("Service removed", "success");
   }
 }
+
+function validateForm() {
+  const title = document.getElementById("title");
+  const providerName = document.getElementById("provider");
+}

@@ -71,7 +71,7 @@
               <h2>Advertise a Service</h2>
               <button class="close-modal" id="closeModalBtn">&times;</button>
             </div>
-            <form id="addServiceForm">
+            <form id="addServiceForm" onsubmit="validateForm()">
               <div class="form-group">
                 <label for="title">Service Title</label>
                 <input type="text" id="title" placeholder="e.g Professional Haircut" maxlength="50" required/>
