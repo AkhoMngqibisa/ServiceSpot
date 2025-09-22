@@ -21,7 +21,7 @@
           <a href="#" class="logo">
             <i class="fas fa-map-marker-alt"></i> ServiceSpot
           </a>
-          <button class="btn btn-primary" id="addService" onclick="openAddServiceModal()">
+          <button class="btn btn-primary" id="openModalBtn" onclick="openModal()">
             <i class="fas fa-plus"></i> Post a Service
           </button>
         </nav>
@@ -69,7 +69,7 @@
           <div class="modal">
             <div class="modal-header">
               <h2>Advertise a Service</h2>
-              <button class="close-modal" id="closeModalBtn">&times;</button>
+              <button class="close-modal" id="closeModalBtn" onclick="closeModal()">&times;</button>
             </div>
             <form id="addServiceForm" onsubmit="validateForm()">
               <div class="form-group">

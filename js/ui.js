@@ -4,6 +4,25 @@
  * UI interactions (Modal, Toasts, Filters)
  */
 
+let closeModalBtn;
+let currentFilter = "All";
+let filterBtns;
+let modalOverlay;
+let openModalBtn;
+let servicesGrid;
+let searchInput;
+let serviceList = [];
+
+document.addEventListener("DOMContentLoaded", function () {
+  closeModalBtn = document.getElementById("closeModalBtn");
+  filterBtns = document.querySelectorAll(".filter-btn");
+  modalOverlay = document.getElementById("modalOverlay");
+  openModalBtn = document.getElementById("openModalBtn")
+  servicesGrid = document.getElementById("servicesGrid");
+  searchInput = document.getElementById("searchInput");
+  initializeData();
+});
+
 function displayData(filteredListings, servicesGrid) {
   // Check if there is already services added
   if (filteredListings.length === 0) {
@@ -111,6 +130,6 @@ function sendWhatsAppMessage(recipientCell, recipientMessage) {
   );
 }
 
-function openAddServiceModal() {
+function openModal() {
   modalOverlay.classList.add("open");
 }
