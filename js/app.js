@@ -102,10 +102,12 @@ function validateForm() {
     const providerName = document.getElementById("provider").value;
     const title = document.getElementById("title").value;
 
-    let errorMessage = '';
+    let errorMessage = document.getElementById("errorMessage");
     let image = document.getElementById("image").value;
     let isValid = true;
 
+    errorMessage.textContent = '';
 
-  })
+    if(!isValid)  return false;
+  });
 }
