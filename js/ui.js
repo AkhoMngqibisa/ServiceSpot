@@ -133,3 +133,8 @@ function sendWhatsAppMessage(recipientCell, recipientMessage) {
 function openModal() {
   modalOverlay.classList.add("open");
 }
+
+function closeModal() {
+  closeModalBtn.classList.remove("open");
+  modalOverlay.classList.remove("open");
+} 
