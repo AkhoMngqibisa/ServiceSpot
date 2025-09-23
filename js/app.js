@@ -95,5 +95,17 @@ function validateForm() {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    const category = document.getElementById("category").value;
+    const description = document.getElementById("description").value;
+    const price = document.getElementById("price").value;
+    const providerCell = document.getElementsById("cell").value;
+    const providerName = document.getElementById("provider").value;
+    const title = document.getElementById("title").value;
+
+    let errorMessage = '';
+    let image = document.getElementById("image").value;
+    let isValid = true;
+
+
   })
 }
