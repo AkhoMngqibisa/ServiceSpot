@@ -92,6 +92,8 @@ function deleteService(id) {
 }
 
 function validateForm() {
-  const title = document.getElementById("title");
-  const providerName = document.getElementById("provider");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+  })
 }

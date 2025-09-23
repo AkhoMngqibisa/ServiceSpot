@@ -7,6 +7,7 @@
 let closeModalBtn;
 let currentFilter = "All";
 let filterBtns;
+let form;
 let modalOverlay;
 let openModalBtn;
 let servicesGrid;
@@ -16,6 +17,7 @@ let serviceList = [];
 document.addEventListener("DOMContentLoaded", function () {
   closeModalBtn = document.getElementById("closeModalBtn");
   filterBtns = document.querySelectorAll(".filter-btn");
+  form = document.getElementById("addServiceForm");
   modalOverlay = document.getElementById("modalOverlay");
   openModalBtn = document.getElementById("openModalBtn")
   servicesGrid = document.getElementById("servicesGrid");
