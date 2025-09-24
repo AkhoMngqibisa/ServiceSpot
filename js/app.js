@@ -104,5 +104,12 @@ function validateForm() {
   let isValidd = true;
 
   errorMessage.textContent = '';
+
+  if (title === '') {
+    errorMessage.textContent = 'Please enter a title';
+    isValidd = false;
+    console.log("Title is required");
+  }
+
   if (!isValidd) return false;
 }
