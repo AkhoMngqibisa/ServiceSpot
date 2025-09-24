@@ -74,8 +74,8 @@
             <form id="addServiceForm" onsubmit="return validateForm()">
               <div class="form-group">
                 <label for="title">Service Title <span class="required">*</span></label>
-                <input type="text" id="title" placeholder="e.g Professional Haircut" maxlength="50"/>
-                <span id="errorMessage" class="error-message"></span>
+                <input type="text" id="title" placeholder="e.g Professional Haircut" maxlength="50" data-index="1"/>
+                <span id="errorMessage" class="error-message" data-index="1"></span>
               </div>
               <div class="form-group">
                 <label for="category">Category</label>
@@ -88,8 +88,8 @@
               </div>
               <div class="form-group">
                 <label for="provider">Provider Name <span class="required">*</span></label>
-                <input type="text" id="provider" placeholder="e.g John Hill" maxlength="50"/>
-                <span id="errorMessage" class="error-message"></span>
+                <input type="text" id="provider" placeholder="e.g John Hill" maxlength="50" data-index="2"/>
+                <span id="errorMessage" class="error-message" data-index="2"></span>
               </div>
               <div class="form-group">
                 <label for="cell">Provider Cell</label>

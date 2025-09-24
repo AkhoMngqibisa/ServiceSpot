@@ -99,17 +99,18 @@ function validateForm() {
   const providerName = document.getElementById("provider").value;
   const title = document.getElementById("title").value;
 
-  let errorMessage = document.getElementById("errorMessage");
   let image = document.getElementById("image").value;
-  let isValidd = true;
-
-  errorMessage.textContent = '';
+  let isValid = true;
 
   if (title === '') {
-    errorMessage.textContent = 'Please enter a title';
-    isValidd = false;
-    console.log("Title is required");
+    document.querySelector('.error-message[data-index="1"]').textContent = 'Please enter a title'; 
+    isValid = false;
   }
 
-  if (!isValidd) return false;
+  if (providerName === '') {
+    document.querySelector('.error-message[data-index="2"]').textContent = 'Please enter the provider name';
+    isValid = false
+  }
+
+  if (!isValid) return false;
 }
