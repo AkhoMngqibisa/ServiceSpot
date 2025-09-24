@@ -103,7 +103,7 @@ function validateForm() {
   let isValid = true;
 
   if (title === '') {
-    document.querySelector('.error-message[data-index="1"]').textContent = 'Please enter a title'; 
+    document.querySelector('.error-message[data-index="1"]').textContent = 'Please enter a title';
     isValid = false;
   }
 
@@ -113,4 +113,9 @@ function validateForm() {
   }
 
   if (!isValid) return false;
+}
+
+function validateSAMobile(number) {
+  const regex = /^(?:\+27|27|0)(6|7|8)\d{8}$/;
+  return regex.tex(number);
 }
