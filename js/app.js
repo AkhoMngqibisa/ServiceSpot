@@ -119,3 +119,16 @@ function validateSAMobile(number) {
   const regex = /^(?:\+27|27|0)(6|7|8)\d{8}$/;
   return regex.tex(number);
 }
+
+function normalizeSAMobile(number) {
+  number = number.replace(/\s+/g, '');
+
+  if (number.startsWith('0')) {
+    return '+27' + number.slice(1);
+  }
+  if (number.startsWith('27')) {
+    return '+27' + number.slice(2);
+  }
+
+  return number;
+}
