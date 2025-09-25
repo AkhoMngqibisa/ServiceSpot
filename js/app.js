@@ -112,10 +112,14 @@ function validateForm() {
     isValid = false
   }
 
-  if(providerCell !== '' && !validateSAMobile(providerCell)) {
-      document.querySelector('.error-message[data-index="3"]').textContent = 'Please provide a valid mobile number';
-      isValid = false;
+  if (providerCell !== '' && !validateSAMobile(providerCell)) {
+    document.querySelector('.error-message[data-index="3"]').textContent = 'Please provide a valid mobile number';
+    isValid = false;
   }
 
-  if (!isValid) return false;
+  if (price > 9999.99) {
+    document.querySelector('.error-message[data-index="4"]').textContent = 'Price cannot exceed 9999.99';
+  }
+
+    if (!isValid) return false;
 }
