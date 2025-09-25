@@ -4,7 +4,7 @@
 
 function validateSAMobile(number) {
   const regex = /^(?:\+27|27|0)(6|7|8)\d{8}$/;
-  return regex.tex(number);
+  return regex.test(number);
 }
 
 function normalizeSAMobile(number) {

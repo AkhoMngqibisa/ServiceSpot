@@ -112,5 +112,10 @@ function validateForm() {
     isValid = false
   }
 
+  if(providerCell !== '' && !validateSAMobile(providerCell)) {
+      document.querySelector('.error-message[data-index="3"]').textContent = 'Please provide a valid mobile number';
+      isValid = false;
+  }
+
   if (!isValid) return false;
 }
