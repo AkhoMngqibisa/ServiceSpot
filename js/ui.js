@@ -98,16 +98,6 @@ function showToast(message, type = "success") {
   }, 3000);
 }
 
-function escapeHtml(text) {
-  if (!text) return text;
-  return text
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
-}
-
 function contactProvider(providerName, providerCell) {
   if (
     providerCell === "" ||
@@ -119,15 +109,6 @@ function contactProvider(providerName, providerCell) {
     const message = `Hi ${providerName}, I found your listing on ServiceSpot and am interested in your services.`;
     sendWhatsAppMessage(providerCell, message);
   }
-}
-
-function sendWhatsAppMessage(recipientCell, recipientMessage) {
-  // Remove spaces of dashes from the phone number
-  const cell = recipientCell.replace(/[^0-9]/g, "");
-  window.open(
-    `https://wa.me/${cell}?text=${encodeURIComponent(recipientMessage)}`,
-    "_blank",
-  );
 }
 
 function openModal() {
