@@ -121,5 +121,5 @@ function validateForm() {
     document.querySelector('.error-message[data-index="4"]').textContent = 'Price cannot exceed 9999.99';
   }
 
-    if (!isValid) return false;
+  if (!isValid) return false;
 }

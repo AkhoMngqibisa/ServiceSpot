@@ -99,13 +99,13 @@
               </div>
               <div class="form-group">
                 <label for="price">Price (R) <span class="required">*</span></label>
-                <input type="number" id="price" placeholder="e.g R20 or Negotiable" min="0" max="9999.99" step="0.01" data-index="4"/>
+                <input type="number" id="price" placeholder="e.g R20" min="0" max="9999.99" step="0.01" data-index="4"/>
                 <span id="errorMessage" class="error-message" data-index="4"></span>
               </div>
               <div class="form-group">
                 <label for="description">Description <span class="required">*</span></label>
                 <textarea id="description" placeholder="Describe your service, experience, and location..." minlength="100" maxlength="250"></textarea>
-                <span id="errorMessage" class="error-message"></span>
+                <div id="counter" class="counter">0/250</div>
               </div>
               <div class="form-group">
                 <label for="image">Image URL (Optional)</label>
