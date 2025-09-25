@@ -93,7 +93,6 @@ function deleteService(id) {
 
 function validateForm() {
   const category = document.getElementById("category").value;
-  const description = document.getElementById("description").value;
   const price = document.getElementById("price").value;
   const providerCell = document.getElementById("cell").value;
   const providerName = document.getElementById("provider").value;

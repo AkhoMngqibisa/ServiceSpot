@@ -5,7 +5,9 @@
  */
 
 let closeModalBtn;
+let counter;
 let currentFilter = "All";
+let description;
 let filterBtns;
 let modalOverlay;
 let openModalBtn;
@@ -15,12 +17,15 @@ let serviceList = [];
 
 document.addEventListener("DOMContentLoaded", function () {
   closeModalBtn = document.getElementById("closeModalBtn");
+  counter = document.getElementById('counter');
+  description = document.getElementById('description');
   filterBtns = document.querySelectorAll(".filter-btn");
   modalOverlay = document.getElementById("modalOverlay");
   openModalBtn = document.getElementById("openModalBtn")
   servicesGrid = document.getElementById("servicesGrid");
   searchInput = document.getElementById("searchInput");
   initializeData();
+  inputEventListener();
 });
 
 function displayData(filteredListings, servicesGrid) {
@@ -118,4 +123,10 @@ function openModal() {
 function closeModal() {
   closeModalBtn.classList.remove("open");
   modalOverlay.classList.remove("open");
-} 
+}
+
+function inputEventListener() {
+  description.addEventListener('input', () => {
+    counter.textContent = `${description.value.length}/${description.maxLength}`
+  });
+}
