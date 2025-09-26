@@ -93,6 +93,7 @@ function deleteService(id) {
 
 function validateForm() {
   const category = document.getElementById("category").value;
+  const description = document.getElementById("description").value;
   const price = document.getElementById("price").value;
   const providerCell = document.getElementById("cell").value;
   const providerName = document.getElementById("provider").value;
@@ -118,6 +119,11 @@ function validateForm() {
 
   if (price > 9999.99) {
     document.querySelector('.error-message[data-index="4"]').textContent = 'Price cannot exceed 9999.99';
+  }
+
+  if (!image.trim()) {
+    const seed = Math.random().toString(36).substring(7);
+    image = `https://picsum.photos/seed/${seed}/400/300`;
   }
 
   if (!isValid) return false;
