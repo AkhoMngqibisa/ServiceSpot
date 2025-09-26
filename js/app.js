@@ -82,6 +82,13 @@ function filterData(serviceList) {
   return filteredListings;
 }
 
+function addService(service) {
+  serviceList.unshift(service); // Add to the top
+  saveDataToLocalStorage();
+  renderData();
+  showToast("Service posted successfully!", "success");
+}
+
 function deleteService(id) {
   if (confirm("Are you sure you want to remove this service?")) {
     serviceList = serviceList.filter((item) => item.id !== id);
@@ -137,6 +144,9 @@ function validateForm() {
       description,
       image,
     };
+  
+    addService(newService);
+    
   } else {
     return false;
   }
