@@ -102,24 +102,24 @@ function validateForm() {
   const category = document.getElementById("category").value;
   const description = document.getElementById("description").value;
   const price = document.getElementById("price").value;
-  const providerName = document.getElementById("provider").value;
+  const provider = document.getElementById("provider").value;
   const title = document.getElementById("title").value;
-
+ 
+  let cell = document.getElementById("cell").value;
   let image = document.getElementById("image").value;
   let isValid = true;
-  let providerCell = document.getElementById("cell").value;
 
   if (title === '') {
     document.querySelector('.error-message[data-index="1"]').textContent = 'Please enter a title';
     isValid = false;
   }
 
-  if (providerName === '') {
+  if (provider === '') {
     document.querySelector('.error-message[data-index="2"]').textContent = 'Please enter the provider name';
     isValid = false
   }
 
-  if (providerCell !== '' && !validateSAMobile(providerCell)) {
+  if (cell !== '' && !validateSAMobile(cell)) {
     document.querySelector('.error-message[data-index="3"]').textContent = 'Please provide a valid mobile number';
     isValid = false;
   }
@@ -134,13 +134,13 @@ function validateForm() {
   }
 
   if (isValid) {
-    providerCell = normalizeSAMobile(providerCell);
+    cell = normalizeSAMobile(cell);
     const newService = {
       id: Date.now(),
       title,
       category,
-      providerName,
-      providerCell,
+      provider,
+      cell,
       price,
       description,
       image,
