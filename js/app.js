@@ -126,5 +126,18 @@ function validateForm() {
     image = `https://picsum.photos/seed/${seed}/400/300`;
   }
 
-  if (!isValid) return false;
+  if (isValid) {
+    const newService = {
+      id: Date.now(),
+      title,
+      category,
+      providerName,
+      providerCell,
+      price,
+      description,
+      image,
+    };
+  } else {
+    return false;
+  }
 }
