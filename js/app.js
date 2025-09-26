@@ -102,12 +102,12 @@ function validateForm() {
   const category = document.getElementById("category").value;
   const description = document.getElementById("description").value;
   const price = document.getElementById("price").value;
-  const providerCell = document.getElementById("cell").value;
   const providerName = document.getElementById("provider").value;
   const title = document.getElementById("title").value;
 
   let image = document.getElementById("image").value;
   let isValid = true;
+  let providerCell = document.getElementById("cell").value;
 
   if (title === '') {
     document.querySelector('.error-message[data-index="1"]').textContent = 'Please enter a title';
@@ -134,6 +134,7 @@ function validateForm() {
   }
 
   if (isValid) {
+    providerCell = normalizeSAMobile(providerCell);
     const newService = {
       id: Date.now(),
       title,
