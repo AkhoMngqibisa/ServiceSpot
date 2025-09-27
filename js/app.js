@@ -24,7 +24,7 @@ function loadData() {
         category: "Barber",
         provider: "Micheal Dok",
         cell: null,
-        price: "R100+",
+        price: "250",
         description:
           "Professional cuts, hot towel shaves, and a friendly atmosphere. Walk-ins welcome.",
         image: "/assets/Men's Haircut.png",
@@ -35,7 +35,7 @@ function loadData() {
         category: "Salon",
         provider: "Bella Beauty",
         cell: "+27621982193",
-        price: "R80+",
+        price: "400",
         description:
           "Special occasion hair styling and makeup trials available at home or studio.",
         image: "/assets/Bridal Styling.png",
@@ -46,7 +46,7 @@ function loadData() {
         category: "Tutor",
         provider: "Akhona Mngqibisa",
         cell: "+27621982193",
-        price: "R150/hr",
+        price: "150",
         description:
           "Certified teacher helping with Algebra, Calculus, and SAT prep. Group discounts available.",
         image: "/assets/Maths Tutor.png",

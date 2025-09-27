@@ -58,7 +58,7 @@ function displayData(filteredListings, servicesGrid) {
                 </div>
                 <p class="card-desc"> ${escapeHtml(item.description)}</p>
                 <div class="card-footer">
-                <span class="price">${escapeHtml(item.price)}</span>
+                <span class="price">R ${escapeHtml(item.price)}</span>
                 <button class="btn btn-outline" style="padding: 5px 12px; font-size: 0.85rem;" onclick="contactProvider('${item.provider}','${item.cell}')">
                   Contact
                 </button>
