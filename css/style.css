@@ -27,6 +27,10 @@ body {
   line-height: var(--line-height);
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 /* --- Layout and Typography ---*/
 .container {
   max-width: 1200px;

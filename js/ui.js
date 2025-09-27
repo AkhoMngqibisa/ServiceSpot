@@ -4,6 +4,7 @@
  * UI interactions (Modal, Toasts, Filters)
  */
 
+let body;
 let closeModalBtn;
 let counter;
 let currentFilter = "All";
@@ -16,6 +17,7 @@ let searchInput;
 let serviceList = [];
 
 document.addEventListener("DOMContentLoaded", function () {
+  body = document.body;
   closeModalBtn = document.getElementById("closeModalBtn");
   counter = document.getElementById('counter');
   description = document.getElementById('description');
@@ -117,10 +119,12 @@ function contactProvider(providerName, providerCell) {
 }
 
 function openModal() {
+  body.classList.add("no-scroll");
   modalOverlay.classList.add("open");
 }
 
 function closeModal() {
+  body.classList.remove("no-scroll");
   closeModalBtn.classList.remove("open");
   modalOverlay.classList.remove("open");
 }
