@@ -104,7 +104,7 @@ function validateForm() {
   const price = document.getElementById("price").value;
   const provider = document.getElementById("provider").value;
   const title = document.getElementById("title").value;
- 
+
   let cell = document.getElementById("cell").value;
   let image = document.getElementById("image").value;
   let isValid = true;
@@ -145,10 +145,8 @@ function validateForm() {
       description,
       image,
     };
-  
     addService(newService);
-    
-  } else {
-    return false;
+    closeModal();
   }
+  return false;
 }
