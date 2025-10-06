@@ -10,6 +10,7 @@ let counter;
 let currentFilter = "All";
 let description;
 let filterBtns;
+let form;
 let modalOverlay;
 let openModalBtn;
 let servicesGrid;
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   counter = document.getElementById('counter');
   description = document.getElementById('description');
   filterBtns = document.querySelectorAll(".filter-btn");
+  form = document.getElementById("addServiceForm");
   modalOverlay = document.getElementById("modalOverlay");
   openModalBtn = document.getElementById("openModalBtn")
   servicesGrid = document.getElementById("servicesGrid");
@@ -124,6 +126,7 @@ function openModal() {
 }
 
 function closeModal() {
+  form.reset();
   body.classList.remove("no-scroll");
   closeModalBtn.classList.remove("open");
   modalOverlay.classList.remove("open");
