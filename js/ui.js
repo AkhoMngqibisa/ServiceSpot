@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
   searchInput = document.getElementById("searchInput");
   initializeData();
   inputEventListener();
+  imageEventListener();
 });
 
 function displayData(filteredListings, servicesGrid) {
@@ -138,6 +139,26 @@ function closeModal() {
 function inputEventListener() {
   description.addEventListener('input', () => {
     counter.textContent = `${description.value.length}/${description.maxLength}`
+  });
+}
+
+function imageEventListener() {
+  document.getElementById('image').addEventListener('change', function(e){
+    const file = e.target.files[0];
+    const preview = document.getElementById('imagePreview');
+
+    if(file) {
+      // Show preview
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        preview.src = e.target.result;
+        preview.style.display = 'block';
+      };
+      reader.readAsDataURL(file);
+    } else {
+      preview.style.display = 'none';
+      preview.src = '';
+    }
   });
 }
 
