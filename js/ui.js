@@ -127,6 +127,9 @@ function openModal() {
 
 function closeModal() {
   form.reset();
+  document.querySelectorAll('.error-message').forEach(span => {
+    span.textContent = '';
+  });
   body.classList.remove("no-scroll");
   closeModalBtn.classList.remove("open");
   modalOverlay.classList.remove("open");
