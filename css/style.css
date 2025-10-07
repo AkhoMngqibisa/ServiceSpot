@@ -426,7 +426,7 @@ nav {
 }
 
 .error-message {
-  color: red;
+  color: #ef4444;
   font-size: 12px;
   margin-top: 5px;
 }
@@ -439,6 +439,13 @@ nav {
   margin-top: 10px;
   border-radius: 8px;
   border: 1px solid #ddd;
+}
+
+.image-upload-info {
+  color: #ef4444;
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 5px;
 }
 
 /* --- Keyframes ---*/
