@@ -431,6 +431,16 @@ nav {
   margin-top: 5px;
 }
 
+.image-preview {
+  display: none;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
 /* --- Keyframes ---*/
 @keyframes slideIn {
   from {
