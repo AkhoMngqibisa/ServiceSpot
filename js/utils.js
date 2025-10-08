@@ -71,3 +71,27 @@ function processFileUploads(file) {
     reader.readAsDataURL(file);
   });
 }
+
+/**
+ * Finalizes the submission (Saves data, resets UI)
+ */
+function finalizeSubmission(formData, finalImageUrl) {
+  const newService = {
+    ...formData,
+    image: finalImageUrl
+  };
+
+  // Save to App Logic
+  addService(newService);
+
+  // Reset the Form
+  form.reset();
+
+  // Reset the Preview Image (UI cleanup)
+  const preview = document.getElementById('imagePreview');
+  preview.style.display = 'none';
+  preview.src = '';
+
+  // Close the modal
+  closeModal();
+}
