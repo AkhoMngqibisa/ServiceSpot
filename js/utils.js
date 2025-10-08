@@ -38,3 +38,8 @@ function escapeHtml(text) {
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
 }
+
+function getRandomImage() {
+  const seed = Math.random().toString(36).substring(7);
+  return `https://picsum.photos/seed/${seed}/400/300`;
+}
