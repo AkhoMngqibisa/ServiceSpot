@@ -39,7 +39,35 @@ function escapeHtml(text) {
     .replace(/'/g, "&#039;");
 }
 
+/**
+ * Generates a random Picsum image URL
+ */
 function getRandomImage() {
   const seed = Math.random().toString(36).substring(7);
   return `https://picsum.photos/seed/${seed}/400/300`;
+}
+
+/**
+ * Reads a file object and converts it to Base64
+ * Returns a Promise for better async handling
+ */
+function processFileUploads(file) {
+  return new Promise((resolve, reject) => {
+    if (!file) {
+      reject("No file provided");
+      return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = (e) => {
+      resolve(e.target.result); // Returns the Base64 string
+    };
+
+    reader.onerror = (e) => {
+      reject("Error on reading the file");
+    };
+
+    reader.readAsDataURL(file);
+  });
 }
