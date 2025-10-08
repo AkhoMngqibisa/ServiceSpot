@@ -143,14 +143,14 @@ function inputEventListener() {
 }
 
 function imageEventListener() {
-  document.getElementById('image').addEventListener('change', function(e){
+  document.getElementById('image').addEventListener('change', function (e) {
     const file = e.target.files[0];
     const preview = document.getElementById('imagePreview');
 
-    if(file) {
+    if (file) {
       // Show preview
       const reader = new FileReader();
-      reader.onload = function(e) {
+      reader.onload = function (e) {
         preview.src = e.target.result;
         preview.style.display = 'block';
       };
@@ -162,7 +162,9 @@ function imageEventListener() {
   });
 }
 
-function validateForm() {
+async function validateForm(e) {
+  e.preventDefault();
+
   const category = document.getElementById("category").value;
   const description = document.getElementById("description").value;
   const price = document.getElementById("price").value;
@@ -170,47 +172,72 @@ function validateForm() {
   const title = document.getElementById("title").value;
 
   let cell = document.getElementById("cell").value;
-  let image = document.getElementById("image").value;
-  let isValid = true;
 
   if (title === '') {
     document.querySelector('.error-message[data-index="1"]').textContent = 'Please enter a title';
-    isValid = false;
+    return false;
   }
 
   if (provider === '') {
     document.querySelector('.error-message[data-index="2"]').textContent = 'Please enter the provider name';
-    isValid = false
+    return false;
   }
 
   if (cell !== '' && !validateSAMobile(cell)) {
     document.querySelector('.error-message[data-index="3"]').textContent = 'Please provide a valid mobile number';
-    isValid = false;
+    return false;
   }
 
   if (price > 9999.99) {
     document.querySelector('.error-message[data-index="4"]').textContent = 'Price cannot exceed 9999.99';
+    return false;
   }
 
-  if (!image.trim()) {
-    const seed = Math.random().toString(36).substring(7);
-    image = `https://picsum.photos/seed/${seed}/400/300`;
+  // Gather form data
+  const formData = {
+    title, category, provider, cell, price, description
   }
 
-  if (isValid) {
-    cell = normalizeSAMobile(cell);
-    const newService = {
-      id: Date.now(),
-      title,
-      category,
-      provider,
-      cell,
-      price,
-      description,
-      image,
-    };
-    addService(newService);
-    closeModal();
+  // Get the file input
+  const fileInput = document.getElementById('image');
+  const file = fileInput.files[0];
+
+  // Logic: Handle Image
+  try {
+    let imageUrl;
+
+    if (file) {
+      imageUrl = await processFileUploads(file);
+    } else {
+      imageUrl = getRandomImage();
+    }
+
+    finalizeSubmission(formData, imageUrl);
+
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    alert("There was an issue processing your image.");
+    return false;
   }
+
+
+
+  // if (isValid) {
+  //   cell = normalizeSAMobile(cell);
+  //   const newService = {
+  //     id: Date.now(),
+  //     title,
+  //     category,
+  //     provider,
+  //     cell,
+  //     price,
+  //     description,
+  //     image,
+  //   };
+  //   addService(newService);
+  //   closeModal();
+  // }
+
+  // Prevent Default Submit 
   return false;
 }
