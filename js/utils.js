@@ -2,11 +2,17 @@
  * utils.js - Helper functions
  */
 
+/**
+* Validate SA Mobile number
+*/
 function validateSAMobile(number) {
   const regex = /^(?:\+27|27|0)(6|7|8)\d{8}$/;
   return regex.test(number);
 }
 
+/**
+ * Normalize the number (always store as +27)
+ */
 function normalizeSAMobile(number) {
   number = number.replace(/\s+/g, "");
 
@@ -20,6 +26,9 @@ function normalizeSAMobile(number) {
   return number;
 }
 
+/**
+ * Send WhatsApp Message
+ */
 function sendWhatsAppMessage(recipientCell, recipientMessage) {
   // Remove spaces of dashes from the phone number
   const cell = recipientCell.replace(/[^0-9]/g, "");
@@ -29,6 +38,9 @@ function sendWhatsAppMessage(recipientCell, recipientMessage) {
   );
 }
 
+/**
+  * Prevents XSS attacks by escaping HTML characters
+  */
 function escapeHtml(text) {
   if (!text) return text;
   return text
