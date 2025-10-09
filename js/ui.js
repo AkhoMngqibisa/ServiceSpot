@@ -172,6 +172,7 @@ async function validateForm(e) {
   const title = document.getElementById("title").value;
 
   let cell = document.getElementById("cell").value;
+  let id = Date.now();
 
   if (title === '') {
     document.querySelector('.error-message[data-index="1"]').textContent = 'Please enter a title';
@@ -194,8 +195,9 @@ async function validateForm(e) {
   }
 
   // Gather form data
+  cell = normalizeSAMobile(cell);
   const formData = {
-    title, category, provider, cell, price, description
+    id, title, category, provider, cell, price, description
   }
 
   // Get the file input
@@ -219,24 +221,6 @@ async function validateForm(e) {
     alert("There was an issue processing your image.");
     return false;
   }
-
-
-
-  // if (isValid) {
-  //   cell = normalizeSAMobile(cell);
-  //   const newService = {
-  //     id: Date.now(),
-  //     title,
-  //     category,
-  //     provider,
-  //     cell,
-  //     price,
-  //     description,
-  //     image,
-  //   };
-  //   addService(newService);
-  //   closeModal();
-  // }
 
   // Prevent Default Submit 
   return false;
