@@ -131,6 +131,7 @@ function closeModal() {
   document.querySelectorAll('.error-message').forEach(span => {
     span.textContent = '';
   });
+  counter.textContent = `0/${description.maxLength}`
   body.classList.remove("no-scroll");
   closeModalBtn.classList.remove("open");
   modalOverlay.classList.remove("open");
