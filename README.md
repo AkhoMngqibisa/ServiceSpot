@@ -63,3 +63,30 @@ The codebase is separated into three distinct files to maintain scalability:
 app.js: Handles the Model (Data) and Controller (Logic). It decides what data exists.
 ui.js: Handles the View (DOM). It decides how data looks and responds to clicks.
 utils.js: Contains Pure Functions (Helpers). No side effects, just inputs and outputs.
+
+📝 Usage Guide
+
+For Users
+1. Browse: Scroll through the grid or use the Search bar to find a service.
+2. Filter: Click "Barber", "Salon", etc., to narrow results.
+3. Contact: Click "Contact" on a card to open WhatsApp or copy the provider's info.
+
+For Providers
+1. Click the "Post a Service" button in the top right.
+2. Fill in the details (Title, Price, Provider Name, Description).
+3.  Image: You can leave the image field blank for a random placeholder, or upload a small image from your PC.
+4. Click "Post Listing". A Toast notification will confirm success.
+
+⚠️ Known Limitations
+1. Storage Quota: Since data lives in the browser, clearing your browser cache (Ctrl+Shift+Delete) will delete all listings. There is no cloud backup.
+2. Single Device: Listings are only visible on the specific computer/browser where they were created. To share listings across users, you would need to connect this frontend to a backend (Firebase, MongoDB, etc.).
+3. Image Size: Base64 strings are large. Uploading 5 images at 2MB each will crash the app.
+
+🚧 Roadmap / Future Improvements
+1. Backend Integration: Connect to Firebase for real-time multi-user data.
+2. User Authentication: Login/Signup system.
+3. Map Integration: Show provider locations via Google Maps API.
+4. Favorites: Allow users to "heart" or save listings.
+
+📄 License
+This project is open source and available for educational purposes.
