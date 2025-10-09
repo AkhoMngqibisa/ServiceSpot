@@ -194,6 +194,11 @@ async function validateForm(e) {
     return false;
   }
 
+  if (description === '' || description.trim().length < 100) {
+    document.querySelector('.error-message[data-index="5"]').textContent = 'Please enter at least 100 characters';
+    return false;
+  }
+
   // Gather form data
   cell = normalizeSAMobile(cell);
   const formData = {
